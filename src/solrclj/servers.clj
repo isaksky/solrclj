@@ -1,7 +1,7 @@
 (ns solrclj.servers
   ^{:doc "A clojure library for Apache Solr." :author "Matt Lehman"}
   (:import [java.io File]
-           [org.apache.solr.client.solrj.impl CommonsHttpSolrServer]))
+           [org.apache.solr.client.solrj.impl HttpSolrServer]))
 
 (defmulti create-solr-server :type)
 
@@ -55,4 +55,4 @@
 
 (defmethod create-solr-server :http [config]
   (let [config  (merge default-http-config config)]
-      (CommonsHttpSolrServer. (create-server-url config))))
+      (HttpSolrServer. (create-server-url config))))

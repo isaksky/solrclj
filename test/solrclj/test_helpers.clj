@@ -21,7 +21,8 @@
   (doto (WebAppContext.)
     (.setContextPath path)
     (.setWar war)
-    (.setDefaultsDescriptor descriptor)))
+    (.setDefaultsDescriptor descriptor)
+    (.setParentLoaderPriority true)))
 
 (defn create-connector [port]
   (doto (SelectChannelConnector.)
@@ -64,4 +65,3 @@
 (defn delete-test-core
   [core]
   (delete-file-recursively (map-path test-solr-root core)))
-
