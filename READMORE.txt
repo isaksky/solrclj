@@ -1,0 +1,5 @@
+to run a stand-alone jetty server with Solr run:
+lein run -m run-server
+
+runs under localhost:2345
+

@@ -106,4 +106,6 @@
     (test-query)
     (test-facet-order-by-count)
     (test-facet-order-by-index)
-    (test-response-contains-metadata)))
+    (test-response-contains-metadata)
+    ))
+

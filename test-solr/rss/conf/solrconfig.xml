@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config>
+  <luceneMatchVersion>LUCENE_43</luceneMatchVersion>
+
+  <updateHandler class="solr.DirectUpdateHandler2"/>
+
+  <requestDispatcher handleSelect="false"/>
+
+  <requestHandler name="/select" class="solr.SearchHandler"/>
+
+  <requestHandler name="/update" class="solr.UpdateRequestHandler"/>
+
+  <requestHandler name="/admin/" class="solr.admin.AdminHandlers" />
+
+  <requestHandler name="/admin/ping" class="solr.PingRequestHandler"/>
+
+  <admin>
+    <defaultQuery>*:*</defaultQuery>
+  </admin>
+</config>
